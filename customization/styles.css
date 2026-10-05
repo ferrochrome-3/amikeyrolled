@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;700&display=swap');
+
+:root {
+  --base: #191724;
+  --surface: #1f1d2e;
+  --overlay: #26233a;
+  --muted: #6e6a86;
+  --subtle: #908caa;
+  --text: #e0def4;
+  --love: #eb6f92;
+  --gold: #f6c177;
+  --rose: #ebbcba;
+  --pine: #31748f;
+  --foam: #9ccfd8;
+  --iris: #c4a7e7;
+  --highlight-low: #21202e;
+  --highlight-med: #403d52;
+  --highlight-high: #524f67;
+}
+
+body {
+  background-color: var(--base);
+  color: var(--text);
+  font-family: 'Google Sans Flex', -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+input[type="text"] {
+  background-color: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--highlight-med);
+  padding: 8px 12px;
+  border-radius: 4px;
+  outline: none;
+  font-family: inherit;
+}
+
+input[type="text"]:focus {
+  border-color: var(--highlight-high);
+}
+
+input[type="text"]::placeholder {
+  color: var(--muted);
+}
+
+button {
+  background-color: var(--overlay);
+  color: var(--text);
+  border: 1px solid var(--highlight-med);
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+button:hover {
+  background-color: var(--highlight-med);
+  color: var(--text);
+}
+
+.box {
+  margin-bottom: 8px;
+}
+
+#response {
+  margin-top: 12px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+#credits {
+  font-style: italic;
+  color: var(--subtle);
+  margin-top: 6px;
+  font-size: 0.9rem;
+}
