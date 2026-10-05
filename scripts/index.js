@@ -30,7 +30,7 @@ export function isitkeyrolled(boardname, keyprefix) {
   recovery_keys.boarddata = recovery_keys.data[recovery_keys.boardname];
 
   if (recovery_keys.boarddata.devkeys && recovery_keys.boarddata.devkeys.startsWith(recovery_keys.prefix)) {
-    return 'Your device is currently "dmdrolled", aka under devkeys.';
+    return 'Your device is currently "dmdrolled", aka under devkeys, for more support, join our <a href="https://discord.ferrochrome.dev" target="_blank">discord server</a> or <a href="https://fluxer.ferrochrome.dev" target="_blank">fluxer</a>.';
   } else if (recovery_keys.boarddata.unkeyrolled && recovery_keys.boarddata.unkeyrolled.startsWith(recovery_keys.prefix)) {
     return "Congratulations! Your device is not keyrolled";
   } else if (recovery_keys.boarddata.keyrolled && recovery_keys.boarddata.keyrolled.startsWith(recovery_keys.prefix)) {
