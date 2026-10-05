@@ -1,3 +1,6 @@
+// made by trollmeight
+// feel free to use this code, as long as you credit me
+
 const recovery_keys = {};
 
 async function importkeys() {
