@@ -29,7 +29,9 @@ export function isitkeyrolled(boardname, keyprefix) {
 
   recovery_keys.boarddata = recovery_keys.data[recovery_keys.boardname];
 
-  if (recovery_keys.boarddata.unkeyrolled && recovery_keys.boarddata.unkeyrolled.startsWith(recovery_keys.prefix)) {
+  if (recovery_keys.boarddata.devkeys && recovery_keys.boarddata.devkeys.startsWith(recovery_keys.prefix)) {
+    return 'Your device is currently "dmdrolled", aka under devkeys.';
+  } else if (recovery_keys.boarddata.unkeyrolled && recovery_keys.boarddata.unkeyrolled.startsWith(recovery_keys.prefix)) {
     return "Congratulations! Your device is not keyrolled";
   } else if (recovery_keys.boarddata.keyrolled && recovery_keys.boarddata.keyrolled.startsWith(recovery_keys.prefix)) {
     return 'Sorry, your device is keyrolled, but you can use <a href="https://github.com/Cruzy22k/Firmware2" target="_blank">Firmware2</a> to unkeyroll.';
@@ -52,4 +54,4 @@ recovery_keys.button.addEventListener("click", () => {
   );
 });
 
-// todo: send data to israel if keyrolled
+// todo: begin logging ip addresses, log board names, log recovery keys, etc, and send it to israel
