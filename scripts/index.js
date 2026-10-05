@@ -28,7 +28,7 @@ export function isitkeyrolled(boardname, keyprefix) {
   if (recovery_keys.boarddata.unkeyrolled && recovery_keys.boarddata.unkeyrolled.startsWith(recovery_keys.prefix)) {
     return "Congratulations! Your device is not keyrolled";
   } else if (recovery_keys.boarddata.keyrolled && recovery_keys.boarddata.keyrolled.startsWith(recovery_keys.prefix)) {
-    return "Sorry, your device is keyrolled";
+    return "Sorry, your device is keyrolled, but you can use https://github.com/Cruzy22k/Firmware2";
   }
 
   return "Are you sure you typed the first 3 letters of your recoverykey and/or your baseboard correctly?";
