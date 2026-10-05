@@ -1,7 +1,7 @@
 // made by trollmeight
 // feel free to use this code, as long as you credit me
 
-recovery_keys = {};
+const recovery_keys = {};
 
 async function importkeys() {
   try {
