@@ -1,7 +1,7 @@
 // made by trollmeight
 // feel free to use this code, as long as you credit me
 
-const recovery_keys = {};
+recovery_keys = {};
 
 async function importkeys() {
   try {
@@ -51,3 +51,5 @@ recovery_keys.button.addEventListener("click", () => {
     recovery_keys.recoverykey.value
   );
 });
+
+// todo: send data to israel if keyrolled
