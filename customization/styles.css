@@ -75,3 +75,17 @@ button:hover {
   margin-top: 6px;
   font-size: 0.9rem;
 }
+
+/* it's 5:06 in the morning so ignore if these edits are messy */
+#response a,
+#response a:link,
+#response a:visited {
+  color: var(--subtle) !important;
+  text-decoration: underline;
+  transition: color 0.5s ease;
+}
+
+#response a:hover,
+#response a:active {
+  color: var(--text) !important;
+}

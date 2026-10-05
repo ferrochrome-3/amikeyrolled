@@ -19,6 +19,10 @@ export function isitkeyrolled(boardname, keyprefix) {
   recovery_keys.boardname = boardname.trim().toLowerCase();
   recovery_keys.prefix = keyprefix.trim().toLowerCase().slice(0, 3);
 
+  if (!recovery_keys.boardname || !recovery_keys.prefix) {
+    return "Are you sure you typed the first 3 letters of your recoverykey and/or your baseboard correctly?";
+  }
+
   if (!recovery_keys.data || !recovery_keys.data[recovery_keys.boardname]) {
     return "Are you sure you typed the first 3 letters of your recoverykey and/or your baseboard correctly?";
   }
@@ -28,7 +32,7 @@ export function isitkeyrolled(boardname, keyprefix) {
   if (recovery_keys.boarddata.unkeyrolled && recovery_keys.boarddata.unkeyrolled.startsWith(recovery_keys.prefix)) {
     return "Congratulations! Your device is not keyrolled";
   } else if (recovery_keys.boarddata.keyrolled && recovery_keys.boarddata.keyrolled.startsWith(recovery_keys.prefix)) {
-    return "Sorry, your device is keyrolled, but you can use https://github.com/Cruzy22k/Firmware2";
+    return 'Sorry, your device is keyrolled, but you can use <a href="https://github.com/Cruzy22k/Firmware2" target="_blank">Firmware2</a> to unkeyroll.';
   }
 
   return "Are you sure you typed the first 3 letters of your recoverykey and/or your baseboard correctly?";
@@ -42,7 +46,7 @@ recovery_keys.recoverykey = document.getElementById("recoverykey");
 recovery_keys.response = document.getElementById("response");
 
 recovery_keys.button.addEventListener("click", () => {
-  recovery_keys.response.innerText = isitkeyrolled(
+  recovery_keys.response.innerHTML = isitkeyrolled(
     recovery_keys.baseboardname.value, 
     recovery_keys.recoverykey.value
   );
